@@ -1,0 +1,55 @@
+#home > .main {
+    position: relative;
+}
+
+
+
+/**/
+
+
+
+#home > .main > .float {
+    width: 5rem;
+    height: 5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    position: absolute;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#home > .main > .float .icon {
+    width: 100%;
+    height: 100%;
+    --size: 2.5rem;
+    background-color: white;
+}
+
+#home > .main > .float:active {
+    filter: brightness(125%);
+}
+
+
+
+/**/
+
+
+
+#home > .main > .timeline {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#home > .main > .timeline > .end {
+    height: 100%;
+    font-size: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--border);
+    font-weight: bold;
+    display: block;
+}

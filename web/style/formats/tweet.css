@@ -1,0 +1,125 @@
+.tweet {
+    padding: 1rem;
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+}
+
+.tweet:active .text {
+    background-color: var(--surface);
+}
+
+
+
+/**/
+
+
+
+.tweet .avatar {
+    --size: 4rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tweet .body {
+    width: 100%;
+    flex-shrink: 1;
+    align-self: center;
+}
+
+.tweet .body > .top:last-child {
+    padding-bottom: 1rem;
+}
+
+.tweet .body > .text:last-child {
+    margin-bottom: 1rem;
+}
+
+.tweet .body > .bot:only-child {
+    padding-bottom: 1rem;
+}
+
+
+
+/**/
+
+
+
+.tweet .top {
+    padding-bottom: 0.4rem;
+    display: flex;
+}
+
+.tweet .top span {
+    color: var(--muted);
+    text-overflow: ellipsis;
+}
+
+.tweet .top .sep {
+    margin: 0 0.4rem;
+}
+
+.tweet .top .id {
+    width: 1.4rem;
+    flex-grow: 1;
+}
+
+.tweet .top .time {
+    flex-shrink: 1;
+}
+
+.tweet .top .icon {
+    --size: 1.4rem;
+    margin-left: auto;
+    align-self: center;
+    background-color: var(--muted);
+}
+
+
+
+/**/
+
+
+
+.tweet .text {
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    display: block;
+}
+
+
+
+/**/
+
+
+
+.tweet .bot {
+    height: 3.2rem;
+    display: flex;
+}
+
+.tweet .bot > div {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 1;
+    min-width: min-content;
+    align-items: center;
+    display: flex;
+}
+
+.tweet .bot .icon {
+    --size: 1.6rem;
+    margin: 0 0.8rem;
+    background-color: var(--muted);
+}
+
+.tweet .bot span {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    color: var(--muted);
+}
+
+.tweet .bot > div:first-child .icon {
+    margin-left: 0;
+}

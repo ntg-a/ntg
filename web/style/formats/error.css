@@ -1,0 +1,9 @@
+.error > .err {
+    margin-right: 0.4rem;
+    color: red;
+}
+
+.error > .err + span {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}

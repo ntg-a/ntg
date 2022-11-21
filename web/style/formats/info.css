@@ -1,0 +1,15 @@
+.info .log {
+    padding: 0 0.6rem;
+    margin-right: 0.4rem;
+    background-color: var(--muted);
+    font-weight: bold;
+}
+
+.info > .name {
+    font-weight: bold;
+}
+
+.info > .name + span {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}

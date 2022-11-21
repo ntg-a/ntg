@@ -1,0 +1,19 @@
+.sync > div > span {
+    font-weight: bold;
+}
+
+.sync > div > .num {
+    margin-right: 0.4rem;
+}
+
+.sync > .requests > .num + span {
+    color: orange;
+}
+
+.sync > .fetched > .num + span {
+    color: blue;
+}
+
+.sync > .added > .num + span {
+    color: green;
+}

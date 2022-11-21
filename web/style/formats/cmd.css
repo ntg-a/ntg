@@ -1,0 +1,15 @@
+.notifications + .main .cmd {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem !important;
+}
+
+.cmd .prompt {
+    margin-right: 0.4rem;
+    font-weight: bold;
+}
+
+.cmd .name {
+    color: var(--muted);
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+} 

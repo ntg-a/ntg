@@ -1,0 +1,20 @@
+{
+    "name": "ntg",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#000000",
+    "theme_color": "#1d9bf0",
+
+    "icons": [
+        {
+            "type": "image/svg+xml",
+            "src": "/assets/ntg.svg",
+            "sizes": "any"
+        },
+        {
+            "type": "image/png",
+            "src": "/assets/ntg.png",
+            "sizes": "256x256"
+        }
+    ]
+}

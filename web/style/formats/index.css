@@ -1,0 +1,27 @@
+@import "/style/formats/tweet.css";
+@import "/style/formats/error.css";
+@import "/style/formats/info.css";
+@import "/style/formats/sync.css";
+@import "/style/formats/cmd.css";
+@import "/style/formats/url.css";
+
+
+
+/**/
+
+
+
+#home > .main > .timeline > .content > span {
+    text-overflow: ellipsis;
+    display: block;
+}
+
+#home > .main > .timeline > .content > :not(.tweet) + .tweet {
+    border-top: 1px solid var(--border);
+    margin-top: 1rem;
+}
+
+#home > .main > .timeline > .content > * {
+    padding: 1rem;
+    padding-bottom: 0;
+}

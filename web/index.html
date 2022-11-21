@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=UTF-8>
+        <link rel=manifest href=/manifest.json>
+        <meta name=viewport content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel=preload href=/assets/fonts/chirp-regular.woff as=font type=font/woff crossorigin=anonymous>
+        <link rel=preload href=/assets/fonts/chirp-bold.woff as=font type=font/woff crossorigin=anonymous>
+        <link rel=icon href=/assets/ntg.ico>
+        <title>ntg</title>
+
+        <link rel=stylesheet href=/style/index.css>
+        <script type=module src=/script/index.js async></script>
+    </head>
+    <body>
+
+        <div id=screen>
+
+            <div id=compose>
+                <div class=top>
+                    <button class="icon i-back"></button>
+                    <button class=post disabled>Tweet</button>
+                </div>
+                <div class=bot>
+                    <img class=avatar src=/assets/avatar.jpg></img>
+                    <textarea autocomplete=off spellcheck=false placeholder="What’s happening?"></textarea>
+                </div>
+            </div>
+
+
+
+            <div id=config>
+                <div class=handle></div>
+                <div class=option>
+                    <input id=check-text type=checkbox></input>
+                    <label for=check-text class=name>Text</label>
+                    <label for=check-text class=checkbox></label>
+                </div>
+                <div class=sep></div>
+                <div class=option>
+                    <input id=check-day type=checkbox></input>
+                    <label for=check-day class=name>Day</label>
+                    <label for=check-day class=checkbox></label>
+                </div>
+                <div class=option>
+                    <input id=check-date type=checkbox></input>
+                    <label for=check-date class=name>Date</label>
+                    <label for=check-date class=checkbox></label>
+                </div>
+                <div class=option>
+                    <input id=check-time type=checkbox></input>
+                    <label for=check-time class=name>Time</label>
+                    <label for=check-time class=checkbox></label>
+                </div>
+                <div class=option>
+                    <input id=check-id type=checkbox></input>
+                    <label for=check-id class=name>ID</label>
+                    <label for=check-id class=checkbox></label>
+                </div>
+                <div class=sep></div>
+                <div class=option>
+                    <input id=check-icons type=checkbox></input>
+                    <label for=check-icons class=name>Icons</label>
+                    <label for=check-icons class=checkbox></label>
+                </div>
+                <div class=option>
+                    <input id=check-labels type=checkbox></input>
+                    <label for=check-labels class=name>Labels</label>
+                    <label for=check-labels class=checkbox></label>
+                </div>
+                <div class=option>
+                    <input id=check-avatar type=checkbox></input>
+                    <label for=check-avatar class=name>Avatar</label>
+                    <label for=check-avatar class=checkbox></label>
+                </div>
+                <div class=option>
+                    <input id=check-options type=checkbox></input>
+                    <label for=check-options class=name>Options</label>
+                    <label for=check-options class=checkbox></label>
+                </div>
+            </div>
+
+
+
+            <div id=home>
+                <div class=header>
+                    <div class=home>
+                        <img class=avatar src=/assets/avatar.jpg></img>
+                        <div class="icon i-twitter"></div>
+                        <button class="icon i-stars"></button>
+                    </div>
+                    <div class=search>
+                        <label for=text-search class="icon i-search"></label>
+                        <input id=text-search type=search autocomplete=off spellcheck=false placeholder="Search"></input>
+                    </div>
+                    <div class=notifications>
+                        <img class=avatar src=/assets/avatar.jpg></img>
+                        <span>Notifications</span>
+                    </div>
+                    <div class=messages>
+                        <label for=text-command>&gt;</label>
+                        <input id=text-command type=search autocomplete=off spellcheck=false placeholder="_"></input>
+                    </div>
+                </div>
+
+                <div class=main>
+                    <button class=float>
+                        <div class="icon i-compose"></div>
+                    </button>
+                    <div class=timeline>
+                        <div class=content></div>
+                        <span class=end>.</span>
+                    </div>
+                </div>
+
+                <div class=footer>
+                    <button class="icon i-home"></button>
+                    <button class="icon i-search"></button>
+                    <button class="icon i-notifications"></button>
+                    <button class="icon i-messages"></button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <template id=tweet>
+            <div class=tweet>
+                <img class=avatar src=/assets/avatar.jpg></img>
+                <div class=body>
+                    <div class=top>
+                        <span class=time></span>
+                        <span class=sep>&#183;</span>
+                        <span class=id></span>
+                        <div class="icon i-options"></div>
+                    </div>
+                    <span class=text></span>
+                    <div class=bot>
+                        <div class=reply>
+                            <div class="icon i-reply"></div>
+                            <span class=value></span>
+                        </div>
+                        <div class=retweet>
+                            <div class="icon i-retweet"></div>
+                            <span class=value></span>
+                        </div>
+                        <div class=like>
+                            <div class="icon i-like"></div>
+                            <span class=value></span>
+                        </div>
+                        <div class=share>
+                            <div class="icon i-share"></div>
+                            <span class=value></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id=error>
+            <div class=error>
+                <span class=err>ERR</span>
+            </div>
+        </template>
+
+        <template id=info>
+            <div class=info>
+                <span class=log>LOG</span>
+                <span class=name></span>
+            </div>
+        </template>
+
+        <template id=sync>
+            <div class=sync>
+                <div class=requests>
+                    <span class=num></span>
+                    <span>Requests</span>
+                </div>
+                <div class=fetched>
+                    <span class=num></span>
+                    <span>Fetched</span>
+                </div>
+                <div class=added>
+                    <span class=num></span>
+                    <span>Added</span>
+                </div>
+            </div>
+        </template>
+
+        <template id=cmd>
+            <div class=cmd>
+                <span class=prompt>&gt;</span>
+                <span class=name></span>
+            </div>
+        </template>
+
+        <template id=url>
+            <span class=url></span>
+        </template>
+
+    </body>
+</html>

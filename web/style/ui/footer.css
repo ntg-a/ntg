@@ -1,0 +1,16 @@
+#home > .footer {
+    border-top: 1px solid var(--border);
+    display: flex;
+}
+
+
+
+/**/
+
+
+
+#home > .footer .icon {
+    height: 100%;
+    flex-grow: 1;
+    --size: 2.2rem;
+}

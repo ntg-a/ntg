@@ -1,0 +1,134 @@
+#home > .header {
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+#home > .header > * {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--background);
+}
+
+
+
+/**/
+
+
+
+#home > .header > * {
+    display: none;
+}
+
+#home > .home > .home {
+    display: flex;
+}
+
+#home > .search > .search {
+    display: flex;
+}
+
+#home > .notifications > .notifications {
+    display: flex;
+}
+
+#home > .messages > .messages {
+    display: flex;
+}
+
+
+
+/**/
+
+
+
+#home > .header > .home {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#home > .header > .home .avatar {
+    --size: 2.2rem;
+}
+
+#home > .header > .home .i-stars {
+    --size: 2.2rem;
+}
+
+#home > .header > .home .i-twitter {
+    background-color: var(--accent);
+    --size: 2.5rem;
+}
+
+
+
+/**/
+
+
+
+#home > .header > .search .icon {
+    height: 100%;
+    width: 4.2rem;
+    --size: 1.8rem;
+    cursor: text;
+}
+
+#home > .header > .search input {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 1;
+    overflow-x: scroll;
+    padding-right: 1rem;
+}
+
+
+
+/**/
+
+
+
+#home > .header > .notifications {
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#home > .header > .notifications .avatar {
+    --size: 2.2rem;
+}
+
+#home > .header > .notifications span {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    flex-shrink: 1;
+}
+
+
+
+/**/
+
+
+
+#home > .header > .messages label {
+    height: 100%;
+    width: 3.2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-right: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    cursor: text;
+}
+
+#home > .header > .messages input {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 1;
+    overflow-x: scroll;
+    padding-right: 1rem;
+}

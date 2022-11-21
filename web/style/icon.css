@@ -1,0 +1,72 @@
+.icon.i-twitter { --mask-image: url(/assets/icons/twitter.svg); }
+.icon.i-compose { --mask-image: url(/assets/icons/compose.svg); }
+.icon.i-stars { --mask-image: url(/assets/icons/stars.svg); }
+.icon.i-back { --mask-image: url(/assets/icons/back.svg); }
+
+.icon.i-home { --mask-image: url(/assets/icons/home-closed.svg); }
+.icon.i-search { --mask-image: url(/assets/icons/search-closed.svg); }
+.icon.i-notifications { --mask-image: url(/assets/icons/notifications-closed.svg); }
+.icon.i-messages { --mask-image: url(/assets/icons/messages-closed.svg); }
+
+.icon.i-home.open { --mask-image: url(/assets/icons/home-open.svg); }
+.icon.i-search.open { --mask-image: url(/assets/icons/search-open.svg); }
+.icon.i-notifications.open { --mask-image: url(/assets/icons/notifications-open.svg); }
+.icon.i-messages.open { --mask-image: url(/assets/icons/messages-open.svg); }
+
+.icon.i-options { --mask-image: url(/assets/icons/options.svg); }
+.icon.i-reply { --mask-image: url(/assets/icons/reply.svg); }
+.icon.i-retweet { --mask-image: url(/assets/icons/retweet.svg); }
+.icon.i-like { --mask-image: url(/assets/icons/like.svg); }
+.icon.i-share { --mask-image: url(/assets/icons/share.svg); }
+
+
+
+/**/
+
+
+
+html::after {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    position: absolute;
+
+    content:
+        url(/assets/icons/home-open.svg)
+        url(/assets/icons/search-open.svg)
+        url(/assets/icons/notifications-open.svg)
+        url(/assets/icons/messages-open.svg)
+    ;
+}
+
+
+
+/**/
+
+
+
+.icon {
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--foreground);
+
+    --mask-position: center;
+    --mask-repeat: no-repeat;
+    --mask-size: var(--size) var(--size);
+
+    mask-size: var(--mask-size);
+    mask-image: var(--mask-image);
+    mask-repeat: var(--mask-repeat);
+    mask-position: var(--mask-position);
+    -webkit-mask-size: var(--mask-size);
+    -webkit-mask-image: var(--mask-image);
+    -webkit-mask-repeat: var(--mask-repeat);
+    -webkit-mask-position: var(--mask-position);
+}
+
+.avatar {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
