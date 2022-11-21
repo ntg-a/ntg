@@ -1,0 +1,14 @@
+{
+    "main": "dist",
+    "type": "module",
+
+    "dependencies": {
+        "dotenv": "*",
+        "mime-types": "*",
+        "html-entities": "*"
+    },
+
+    "devDependencies": {
+        "@types/node": "*"
+    }
+}
